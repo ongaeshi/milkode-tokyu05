@@ -50,10 +50,25 @@
 
       <article>
         <h3>作った動機</h3>
+        <ul class="build">
+          <li>コードを読むことの重要性は年々向上
+          <li>が、支援するためのツールは余り変わっていない・・
+          <li>"grep" + "Web検索" = ??
+        </ul>
+        <div class="build">
+          <p class="red build-end">もっとコードリーディングを簡単にしたい!!</p>
+        </div>
       </article>
 
       <article>
         <h3>Milkodeの特徴</h3>
+        <ul class="build">
+          <li>テキストファイルなら何でも
+          <li>高速
+          <li>行指向
+          <li>エディタでもブラウザでも
+          <li>RubyGemsのおかげ
+        </ul>
       </article>
 
       <article>
@@ -98,161 +113,6 @@ $ gem install milkode
               Web
             <td>
               <a href="http://ongaeshi.me">http://ongaeshi.me</a></li>
-        </table>
-      </article>
-
-      <!-- 以下、削除予定 -->
-
-      <article>
-        <h3>What's Milkode?</h3>
-        <ul class="build">
-        <!-- <ul> -->
-          <li>Milkode is line-oriented <span class="red">source code search</span> engine.
-          <li>Search from a <span class="red">browser</span> or <span class="red">command line</span>.
-          <li>Match <span class="red">lines</span>. (General search engines to match files.)
-          <li>20,000 files much needed search time is about <span class="red">1 second</span>.
-        </ul>
-      </article>
-
-      <article>
-        <h3>Install</h3>
-        <pre>
-$ gem install milkode
-</pre>
-        <p>
-          <img style='height: 400px' src='images/rubygems.png'>
-        </p>
-      </article>
-
-      <article>
-        <h3>Setup</h3>
-        <pre>
-# Create default database
-$ milk init --default
-create     : ~/.milkode/db/milkode.db created.
-</pre>
-        <pre>
-# Add /path/to/dir from local directory.
-$ milk add /path/to/dir
-package    : dir
-add_record : /path/to/dir/a.rb
-add_record : /path/to/dir/b.rb
-add_record : /path/to/dir/README
-*milkode*  : 1 packages, 3 records in ~/.milkode/db/milkode.db.
-
-# Add CRuby's source code from http.
-$ milk add http://ftp.ruby-lang.org/pub/ruby/1.9/ruby-1.9.2-p290.zip
-</pre>
-
-      </article>
-
-      <article>
-        <h3>Search command line</h3>
-        <pre>
-# Move to the root of the CRuby's source code.
-$ cd ~/.milkode/packages/zip/ruby-1.9.2-p180
-
-# Where's the definition of the String class?
-$ gmilk rb_define_class String
-
-# Find from 3247 files ...
-
-# Milkode you can find the line in 1 second.
-ext/stringio/stringio.c:1387:    VALUE StringIO = rb_define_class("StringIO", rb_cData);
-ext/strscan/strscan.c:1251:    StringScanner = rb_define_class("StringScanner", rb_cObject);
-ext/strscan/strscan.c:1252:    ScanError = rb_define_class_under(StringScanner, "Error", rb_eStandardError);
-string.c:7448:    rb_cString  = rb_define_class("String", rb_cObject);
-</pre>
-      </article>
-
-      <article>
-        <h3>Web app</h3>
-        <pre>
-$ milk web
-</pre>
-        <p>
-          <img style='height: 500px' src='images/milkweb.png'>
-        </p>
-      </article>
-
-      <article>
-        <h3>Manage database</h3>
-        <pre>
-$ milk init                         # Init database
-$ milk add /path/to/foo             # Add package
-</pre>
-
-        <pre>
-$ milk update                       # Update current dir's package
-$ milk update --all                 # Update all packages
-$ milk remove foo                   # Remove package
-$ milk rebuild                      # Rebuild database
-</pre>
-
-        <pre>
-$ milk list                         # List packages
-$ milk pwd                          # Disp current database
-$ milk setdb                        # Change default database
-$ milk --help                       # Help
-</pre>          
-      </article>
-
-      <article>
-        <h3>Advance search</h3>
-        <pre>
-$ gmilk -u new_word                 # With update
-</pre>
-        <pre>
-$ gmilk -s h ifndef RUBY_H          # Suffix
-$ gmilk -f ChangeLog matz           # File path
-$ gmilk -d ./test test_method       # Start directory
-</pre>
-        <pre>
-$ gmilk -a engineyard               # All packages
-$ gmilk -p jruby JRubyMethod printf # Specify package
-</pre>
-      </article>
-
-      <article>
-        <h3>With Emacs</h3>
-        <pre>
-; .emacs  or .emacs.d/init.el
-(global-set-key "\M-g" 'grep) 
-(setq grep-command "gmilk ")
-(setq grep-use-null-device nil)
-(global-set-key "\M-o" 'next-error)
-</pre>
-        <p>
-          <img style='height: 400px' src='images/emacs.png'>
-        </p>
-        <!-- エディタの画像を貼る -->
-      </article>
-
-      <article>
-        <h3>Thank you!</h3>
-        <p><img src='images/ongaeshi.jpg' /></p>
-
-        <table>
-          <tr>
-            <td>
-              Name
-            <td>
-              ongaeshi  (恩返し)
-          <tr>
-            <td>
-              Web
-            <td>
-              <a href="http://milkode.ongaeshi.me">http://milkode.ongaeshi.me</a></li>
-          <tr>
-            <td>
-              RubyGems
-            <td>
-              <a href="https://rubygems.org/gems/milkode">milkode</a></li>
-          <tr>
-            <td>
-              Mail
-            <td>
-              <a title="mailto:ongaeshi0621@gmail.com" href="mailto:ongaeshi0621@gmail.com">ongaeshi0621@gmail.com</a>
         </table>
       </article>
 
