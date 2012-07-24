@@ -1,11 +1,12 @@
 ! TokyuRuby会議05 LT 原稿
 
 !! 準備
+○エディタを起動
 ○ブラウザ 6 エディタ 5
 ○$ cd milkode_tokyu05 && milk web
 ○$ milk setdb milkode_tokyu05
-○~/tmp/memo.txt を開いておく
 ○スライド開く、フルスクリーンモード
+○デモがもたつくのでテキパキ行うよう努める
 
 !! ページ1: Rubyで作ったソースコード検索エンジンMilkode
 ●スライドをフルスクリーン、文字サイズを調整する

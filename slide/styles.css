@@ -284,6 +284,9 @@ b {
 .white {
   color: white;
 }
+.orange {
+  color: #ff9966;
+}
 
 a {
   color: rgb(0, 102, 204);
@@ -624,6 +627,7 @@ article.smaller q::after {
 /* Customize */
 
 p.build-end {
-  font-size: 40px;
-  margin-top: 60px;
+  font-size: 50px;
+  margin-left: 50px;
+  margin-top: 80px;
 }
